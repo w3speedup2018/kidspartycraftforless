@@ -1,0 +1,30 @@
+{%- comment -%}
+This file has been modified by the Yoast SEO for Shopify app.
+You can learn more about this (and learn how to cleanly revert these changes) at https://yoa.st/removing-theme-changes.
+{%- endcomment -%}
+{%- liquid
+	assign disabled_by_yoast_seo = true
+	if content_for_header contains 'yoast-active-script'
+		assign disabled_by_yoast_seo = false
+	endif
+-%}
+<!-- /snippets/comment.liquid -->
+<div id="{{ comment.id }}" class="comment card">
+  <div class="card-body">
+    <div class="grid grid-small flex-nowrap align-center spacer-bottom-sm">
+      <div class="grid__item flex-auto">
+        <span class="btn btn--square">
+          {{ comment.author | first }}
+        </span>
+      </div>
+      <div class="grid__item flex-fill overflow-hidden">
+        <span class="h5 comment-author text-ellipsis spacer-bottom-xs">{{ comment.author }}</span>
+        <span class="{{ settings.icon }}">calendar_today</span>
+        <time datetime="{{ comment.created_at | date: '%Y-%m-%d' }}" class="comment-date">{{ comment.created_at | date: format: 'month_day_year' }}</time>
+      </div>
+    </div>
+    <div class="rte spacer-bottom-none text-lead" {% if disabled_by_yoast_seo %}itemtype="http://schema.org/CreativeWork"{% endif %} {% if disabled_by_yoast_seo %}itemprop="comment"{% endif %}>
+      {{ comment.content }}
+    </div>
+  </div>
+</div>

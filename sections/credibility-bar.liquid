@@ -1,0 +1,109 @@
+<div id="credibility-bar" data-section-id="{{ section.id }}" data-section-type="credibility-bar" data-template="{{ template.name }}" class="credibility-bar-{{ section.id }}">
+  <div class="blocks-wrap">
+    {% for block in section.blocks %}
+    <div class="feature-block block-{{ forloop.index }}">
+      {% if block.settings.icon %}
+        <div class="guarantee-icon">
+          <span class="{{ settings.icon }} icon-width icon-image icon-{{ section.settings.icon_size }}" aria-hidden="true">{{ block.settings.icon }}</span>
+        </div>
+      {% endif %}
+      <span class="text">{{ block.settings.text }}</span>
+    </div>
+    {% endfor %}
+  </div>
+</div>
+
+<style>
+  .credibility-bar-{{ section.id }} {
+    background-color: {{ section.settings.background }};
+  }
+
+  .credibility-bar-{{ section.id }} span.text {
+    color: {{ section.settings.text_color }};
+  }
+
+  .credibility-bar-{{ section.id }} .icon-image {
+    color: {{ section.settings.icon_color }};
+  }
+</style>
+
+{% schema %}
+  {
+    "name": "USP Bar",
+    "max_blocks": 5,
+    "settings": [
+      {
+        "type": "color",
+        "id": "background",
+        "label": "Background color",
+        "default": "#FAF8FF"
+      },
+      {
+        "type": "color",
+        "id": "text_color",
+        "label": "Text color",
+        "default": "#000"
+      },
+      {
+        "type": "color",
+        "id": "icon_color",
+        "label": "Icon color",
+        "default": "#000"
+      },
+      {
+        "type": "select",
+        "id": "icon_size",
+        "label": "Media size",
+        "default": "xl",
+        "options": [
+          {
+            "value": "xs",
+            "label": "Extra small"
+          },
+          {
+            "value": "sm",
+            "label": "Small"
+          },
+          {
+            "value": "md",
+            "label": "Medium"
+          },
+          {
+            "value": "lg",
+            "label": "Large"
+          },
+          {
+            "value": "xl",
+            "label": "Extra large"
+          }
+        ]
+      }
+    ],
+    "blocks": [
+      {
+        "name": "Feature",
+        "type": "feature",
+        "settings": [
+          {
+            "type": "text",
+            "id": "icon",
+            "label": "Icon",
+      	    "info": "t:sections.guarantee.blocks.text.settings.guarantee_icon.info",
+            "default": "loyalty",
+            "placeholder": "loyalty"
+          },
+          {
+            "type": "text",
+            "id": "text",
+            "label": "Text"
+          }
+        ]
+      }
+    ],
+    "presets": [
+      {
+        "name": "USP Bar"
+      }
+    ]
+  }
+{% endschema %}
