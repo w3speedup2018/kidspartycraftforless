@@ -4,7 +4,7 @@
 {% endcomment %}
 <!-- Start of Judge.me Core -->
 <link rel="dns-prefetch" href="https://cdn.judge.me/">
-{{ shop.metafields.judgeme.settings }}
+{{ shop.metafields.judgeme.settings | replace: 'type="text/javascript" async src' , 'type="lazyload_int" data-src' | replace: 'media="nope!" onload="this.media=' , '' | replace: '" href="' , ' data-href="' | replace: "'all'" , '' }}
 {% for count in (0..5) %}
   {% assign metafield_key = 'html_miracle_' | append: count %}
   {% assign current_metafield = shop.metafields.judgeme[metafield_key] %}
@@ -13,7 +13,7 @@
 {% endfor %}
 
 
-<script data-cfasync='false' class='jdgm-script'>
+<script data-cfasync='false' class='jdgm-script' type="lazyload_int">
 !function(e){window.jdgm=window.jdgm||{},jdgm.CDN_HOST="https://cdn.judge.me/",
 jdgm.docReady=function(d){(e.attachEvent?"complete"===e.readyState:"loading"!==e.readyState)?
 setTimeout(d,0):e.addEventListener("DOMContentLoaded",d)},jdgm.loadCSS=function(d,t,o,s){

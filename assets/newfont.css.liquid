@@ -1,0 +1,33 @@
+{%- liquid
+    assign accent_family = settings.accent_family
+    assign base_family = settings.base_family
+    assign header_family = settings.header_family
+    assign base_family_bold = base_family | font_modify: "weight", "bolder"
+    assign base_family_italic = base_family | font_modify: "style", "italic"
+    assign base_family_bold_italic = base_family_bold | font_modify: "style", "italic"
+    assign accent_family_bold = accent_family | font_modify: "weight", "bolder"
+    assign icon_split = settings.icon | split: "-"
+    capture icon_family
+        for icon in icon_split
+            unless forloop.last == true
+                echo icon | capitalize | append: " "
+            else
+                echo icon | capitalize
+            endunless
+        endfor
+    endcapture
+-%}
+{{ header_family | font_face: font_display: "swap" }}
+{{ accent_family | font_face: font_display: "swap" }}
+{{ base_family | font_face: font_display: "swap" }}
+{{ base_family_bold | font_face: font_display: "swap" }}
+{{ base_family_italic | font_face: font_display: "swap" }}
+{{ base_family_bold_italic | font_face: font_display: "swap" }}
+{{ accent_family_bold | font_face: font_display: "swap" }}
+@font-face {
+    font-family: {{ icon_family }};
+    font-weight: 400;
+    font-style: normal;
+    font-display: block;
+    src: url({{ settings.icon | append: ".woff2" | asset_url }}) format("woff2");
+}

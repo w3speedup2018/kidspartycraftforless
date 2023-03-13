@@ -325,7 +325,7 @@ You can learn more about this (and learn how to cleanly revert these changes) at
                       data-product-thumbnail
                       data-media-id="{{ media.id }}"
                       style="padding-top: {{ 1 | divided_by: media_aspect_ratio | times: 100 }}%;">
-                      <img loading="lazy" class="product--image product-single__thumb media lazyload"
+                      <img loading="lazy" class="product--image product-single__thumb media lazyloaded"
                       {%- render 'lazysizes', img: media, img_type: 'responsive' -%}
                       alt="{{ thumbnail_alt }}"
                       data-media-id="{{ media.id }}">

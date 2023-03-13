@@ -24,7 +24,7 @@ You can learn more about this (and learn how to cleanly revert these changes) at
         <div class="grid__item large--hide flex-fill whitespace-nowrap nav-containers nav-container-left-icons">
           <ul class="inner-nav-containers">
             <li class="site-nav__item site-nav--open">
-              <a href="" class="site-nav__link site-nav__link--icon js-drawer-open-button-left" aria-controls="NavDrawer" aria-label="{{ 'general.drawers.navigation' | t }}" title="{{ 'general.drawers.navigation' | t }}">
+              <a href="#" class="site-nav__link site-nav__link--icon js-drawer-open-button-left" aria-controls="NavDrawer" aria-label="{{ 'general.drawers.navigation' | t }}" title="{{ 'general.drawers.navigation' | t }}">
                 <span class="{{ settings.icon }}" aria-hidden="true">menu</span>
               </a>
             </li>
@@ -90,7 +90,7 @@ You can learn more about this (and learn how to cleanly revert these changes) at
                 -%}
 
                 {%- if logo_default != blank -%}
-                  <img loading="lazy" class="default-logo imgset lazyload radius-none"
+                  <img loading="lazy" class="default-logo imgset lazyloaded radius-none"
                     {% render 'lazysizes', img: logo_default, img_type: logo_default_type, img_width: logo_default_width %}
                     alt="{{ shop.name }}"
                     {% if disabled_by_yoast_seo %}itemprop="logo"{% endif %}>
@@ -123,7 +123,7 @@ You can learn more about this (and learn how to cleanly revert these changes) at
                 -%}
 
                 {%- if logo_inverted != blank -%}
-                  <img loading="lazy" class="inverted-logo imgset lazyload radius-none"
+                  <img loading="lazy" class="inverted-logo imgset lazyloaded radius-none"
                   {% render 'lazysizes', img: logo_inverted, img_type: logo_inverted_type, img_width: logo_inverted_width %}
                   alt="{{ shop.name }}">
                 {%- else -%}
@@ -144,7 +144,7 @@ You can learn more about this (and learn how to cleanly revert these changes) at
                 -%}
 
                 {%- if logo_mobile != blank -%}
-                  <img loading="lazy" class="mobile-logo imgset lazyload radius-none"
+                  <img loading="lazy" class="mobile-logo imgset lazyloaded radius-none"
                   {% render 'lazysizes', img: logo_mobile, img_type: logo_mobile_type, img_width: logo_mobile_width %}
                   alt="{{ shop.name }}">
                 {%- else -%}

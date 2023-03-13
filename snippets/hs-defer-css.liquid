@@ -6,21 +6,21 @@
 {%- if pages contains template.name -%}
   {%- if local -%}
     {%- if minify and request.design_mode == false -%}
-      <link rel="stylesheet" {% if linkId %}id="{{ linkId }}"{% endif %} href="{{ filename | asset_url | append: '&enable_css_minification=1' }}" media="print" onload="this.media='all'; this.onload = null">
+      <link rel="stylesheet" {% if linkId %}id="{{ linkId }}"{% endif %} data-href="{{ filename | asset_url | append: '&enable_css_minification=1' }}">
     {%- else -%}
-      <link rel="stylesheet" {% if linkId %}id="{{ linkId }}"{% endif %} href="{{ filename | asset_url }}" media="print" onload="this.media='all'; this.onload = null">
+      <link rel="stylesheet" {% if linkId %}id="{{ linkId }}"{% endif %} data-href="{{ filename | asset_url }}">
     {%- endif -%}
   {%- else -%}
-    <link rel="stylesheet" {% if linkId %}id="{{ linkId }}"{% endif %} href="{{ filename }}" media="print" onload="this.media='all'; this.onload = null">
+    <link rel="stylesheet" {% if linkId %}id="{{ linkId }}"{% endif %} data-href="{{ filename }}">
   {%- endif -%}
 {%- else -%}
   {%- if local -%}
     {%- if minify and request.design_mode == false -%}
-      <link rel="stylesheet" {% if linkId %}id="{{ linkId }}"{% endif %} href="{{ filename | asset_url | append: '&enable_css_minification=1' }}">
+      <link rel="stylesheet" {% if linkId %}id="{{ linkId }}"{% endif %} data-href="{{ filename | asset_url | append: '&enable_css_minification=1' }}">
     {%- else -%}
-      <link rel="stylesheet" {% if linkId %}id="{{ linkId }}"{% endif %} href="{{ filename | asset_url}}">
+      <link rel="stylesheet" {% if linkId %}id="{{ linkId }}"{% endif %} data-href="{{ filename | asset_url}}">
     {%- endif -%}
   {%- else -%}
-    <link rel="stylesheet" {% if linkId %}id="{{ linkId }}"{% endif %} href="{{ filename }}">
+    <link rel="stylesheet" {% if linkId %}id="{{ linkId }}"{% endif %} data-href="{{ filename }}">
   {%- endif -%}
 {%- endif -%}

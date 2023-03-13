@@ -1203,9 +1203,10 @@ timber.Drawers = (function() {
   return Drawer;
 })();
 
-
 /* ================ _INIT_TIMBER ================ */
-$(timber.init);
+setTimeout(function() {
+  timber.init();
+}, 1000);
 
 $(document).on("shopify:section:load", function(evt) {
   $(timber.init);
@@ -6572,9 +6573,8 @@ theme.Announcement = (function() {
   return Announcement;
 })();
 
-
 /* ================ _INIT_THEME ================ */
-$(document).ready(function() {
+setTimeout(function() {
   $("body").addClass("page-loaded");
 
   // INIT_THEME_FUNCTIONS

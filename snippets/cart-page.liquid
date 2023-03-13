@@ -67,8 +67,8 @@
                            style="padding-top:{{ 1 | divided_by: item.image.aspect_ratio | times: 100 }}%;">
 
                           {%- if item.image != blank -%}
-                            <img loading="lazy" class="product--image media lazyload"
-                                {% render 'lazysizes', img: item.image, img_type: 'responsive' %}
+                            <img loading="lazy" class="product--image media lazyloaded"
+                                  src="{{ item.image | img_url: '720x' }}"
                                  alt="{{ item.title | escape }}">
                           {%- else -%}
                             {{ "product-1" | placeholder_svg_tag: 'placeholder-svg' }}

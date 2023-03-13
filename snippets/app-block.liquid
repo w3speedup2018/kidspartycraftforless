@@ -1,0 +1,32 @@
+{% render 'judgeme_core' %}
+{% render 'menu-block' %}
+
+<style>
+    @media screen and (max-width: 768px){
+        .desktop_view{
+            display:none !important;
+        }
+        .template-index div#PageContainer main#mainContent .jdgm-medals-wrapper.jdgm-widget {
+            min-height: 195.38px;
+            display: flex !important;
+        }
+    }
+    @media screen and (min-width: 769px){
+        .mobile_view{
+            display:none !important;
+        }
+        .template-index div#PageContainer main#mainContent .jdgm-medals-wrapper.jdgm-widget {
+            min-height: 134.39px;
+            display: flex !important;
+        }
+    }
+    .jdgm-prev-badge__text {
+        visibility: unset !important;
+    }
+    span.badge {
+        display: inline-block!important;
+    }
+    .dbtfy-collection_addtocart {
+        display: block !important;
+    }
+</style>

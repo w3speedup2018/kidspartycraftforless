@@ -78,8 +78,11 @@
   <a href="{{ collection_link }}" class="image-link flex full {% if settings.collection_grid_animation %}collection_grid-animation{% endif %} {% if settings.collection_grid_card %}card{% endif %}">
     <div class="collection_grid-item collection_grid--{{ collection_height }} box media-wrapper {% if settings.collection_grid_card %}card-image{% else %}overlay{% endif %} {{ class }}">
       {%- if collection_image != blank -%}
-        <div class="collection_grid-image media bgset lazyload"
+        <div class="collection_grid-image media bgset lazyloaded desktop_view"
           {%- render 'lazysizes', img: collection_image, img_type: 'background' -%}>
+        </div>
+        <div class="collection_grid-image media bgset lazyloaded mobile_view"
+          {%- render 'lazysizes-2', img: collection_image, img_type: 'background' -%}>
         </div>
       {%- else -%}
         {{ 'collection-' | append: current | placeholder_svg_tag: 'media placeholder-svg' }}

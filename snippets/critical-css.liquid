@@ -1,0 +1,58 @@
+<style>
+body#faq-39-s-kids-party-craft .dbtfy-faq_page {
+    display: block !important;
+}
+
+.variant-unavailable .product-single__quantity, .variant-soldout .product-single__quantity {
+    display: none !important;
+}
+
+.template-collection  .collection-list-products .grid-product .grid-product__wrapper .dbtfy-collection_addtocart {
+    display: block !important;
+}
+
+.template-product .product-single .product-single__media-group:not(.slick-initialized ) {
+    opacity: 1 !important;
+}
+
+.template-product .product-single  .product-single__media-group:not(.slick-initialized ) .grid__item:nth-child(n+2){
+    display:none;
+}
+
+.template-product .product-single  .product-single__thumbnails:not(.slick-initialized) {
+    opacity: 1 !important;
+    justify-content: center;
+}
+
+.template-product .product-single  .product-single__thumbnails:not(.slick-initialized) .grid__item {max-width: 20%;margin-top: 15px;width: 20%;}
+
+.template-product .product-single  .product-single__thumbnails:not(.slick-initialized) .grid__item:nth-child(n+4){
+    display:none;
+}
+
+.template-index [data-section-type="list-collections-template"] .slick-featured-collections:not(.slick-initialized) {
+    opacity: 1 !important;
+}
+
+@media(max-width:767px){
+.site-header  .header-wrapper .grid .grid__item:nth-child(2) {
+    width:auto !important;
+}
+  
+.template-collection .grid .small--six-twelfths {
+    width: 50%;
+    flex: 0 0 50%;
+}
+
+.template-index  [data-section-type="list-collections-template"] .slick-featured-collections:not(.slick-initialized) {
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    opacity: 1 !important;
+}
+
+.template-index [data-section-type="list-collections-template"]  .slick-featured-collections:not(.slick-initialized) .grid__item:nth-child(n+3) {
+    display: none;
+}  
+}
+
+</style>

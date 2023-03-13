@@ -1,0 +1,70 @@
+@font-face {
+  font-family: Poppins;
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+  src: url("https://fonts.shopifycdn.com/poppins/poppins_n7.58aca33913fc6666cc9e8a53f6b16ec5c3c05a3f.woff2?h1=a2lkc3BhcnR5Y3JhZnRmb3JsZXNzLmNvbQ&hmac=cef8f119835c4a8bd4ff0acec7d71e60da05f30747451025209b6f59037ca94c") format("woff2"),
+       url("https://fonts.shopifycdn.com/poppins/poppins_n7.59016f931f3f39434d2e458fba083eb7db7a07d9.woff?h1=a2lkc3BhcnR5Y3JhZnRmb3JsZXNzLmNvbQ&hmac=d4fc094bd8f34e3dfcd7c9bdba5b5ed980df358e44437e33f34310a71d7659c4") format("woff");
+}
+
+@font-face {
+  font-family: Poppins;
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+  src: url("https://fonts.shopifycdn.com/poppins/poppins_n6.e2fdd168541a5add2d1a8d6f2b89b09c9c9e690d.woff2?h1=a2lkc3BhcnR5Y3JhZnRmb3JsZXNzLmNvbQ&hmac=aaae80df18f3d8ac9181f2161ec5496c474cc3822e5cf0b526dda5e75cdb783a") format("woff2"),
+       url("https://fonts.shopifycdn.com/poppins/poppins_n6.6d62d2d0f11a9ff578d200ad2154f9860db165c1.woff?h1=a2lkc3BhcnR5Y3JhZnRmb3JsZXNzLmNvbQ&hmac=ccdc720c97cd0aedf734bddbcaa3af6c2754bd4d94b7f04205e50abda6bf94d3") format("woff");
+}
+
+@font-face {
+  font-family: Poppins;
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+  src: url("https://fonts.shopifycdn.com/poppins/poppins_n4.934accbf9f5987aa89334210e6c1e9151f37d3b6.woff2?h1=a2lkc3BhcnR5Y3JhZnRmb3JsZXNzLmNvbQ&hmac=f8233af4afc1d5ec6c3bad3d86d9c108d9355bc3588d6d7e1b46bea5487653d3") format("woff2"),
+       url("https://fonts.shopifycdn.com/poppins/poppins_n4.ee28d4489eaf5de9cf6e17e696991b5e9148c716.woff?h1=a2lkc3BhcnR5Y3JhZnRmb3JsZXNzLmNvbQ&hmac=b06f62758e04c2cd9a1b419b97fed312153c8f0728bab5d6273f1343e53a9a8a") format("woff");
+}
+
+@font-face {
+  font-family: Poppins;
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+  src: url("https://fonts.shopifycdn.com/poppins/poppins_n7.58aca33913fc6666cc9e8a53f6b16ec5c3c05a3f.woff2?h1=a2lkc3BhcnR5Y3JhZnRmb3JsZXNzLmNvbQ&hmac=cef8f119835c4a8bd4ff0acec7d71e60da05f30747451025209b6f59037ca94c") format("woff2"),
+       url("https://fonts.shopifycdn.com/poppins/poppins_n7.59016f931f3f39434d2e458fba083eb7db7a07d9.woff?h1=a2lkc3BhcnR5Y3JhZnRmb3JsZXNzLmNvbQ&hmac=d4fc094bd8f34e3dfcd7c9bdba5b5ed980df358e44437e33f34310a71d7659c4") format("woff");
+}
+
+@font-face {
+  font-family: Poppins;
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+  src: url("https://fonts.shopifycdn.com/poppins/poppins_i4.a7e8d886e15d5fb9bc964a53b3278effbf270e9c.woff2?h1=a2lkc3BhcnR5Y3JhZnRmb3JsZXNzLmNvbQ&hmac=5459a6819da8f8cd0ba5910838c7f4b904f4a92f386a658b2fe68cf123bc254f") format("woff2"),
+       url("https://fonts.shopifycdn.com/poppins/poppins_i4.e87de252199e27825a41bf81646996685d86452d.woff?h1=a2lkc3BhcnR5Y3JhZnRmb3JsZXNzLmNvbQ&hmac=01746c8c4776c04fac7ce965d117115d4e3b90752d9b8c4ce10be6c8d97577bc") format("woff");
+}
+
+@font-face {
+  font-family: Poppins;
+  font-weight: 700;
+  font-style: italic;
+  font-display: swap;
+  src: url("https://fonts.shopifycdn.com/poppins/poppins_i7.4f85a5d51a1aecf426eea47ac4570ef7341bfdc1.woff2?h1=a2lkc3BhcnR5Y3JhZnRmb3JsZXNzLmNvbQ&hmac=d2b05df6a27a63b502184c9eb0498c7784a8306ab64d21ba7c3b919db82ed9de") format("woff2"),
+       url("https://fonts.shopifycdn.com/poppins/poppins_i7.aff3a08a92d1c136586c611b9fc43d357dfbbefe.woff?h1=a2lkc3BhcnR5Y3JhZnRmb3JsZXNzLmNvbQ&hmac=56deaea911ac521d063e0c21c8decba1115451814d72a040ad9cced7e36f09ab") format("woff");
+}
+
+@font-face {
+  font-family: Poppins;
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+  src: url("https://fonts.shopifycdn.com/poppins/poppins_n9.ab53309b7e3c2539cb1143634ba608d71386523c.woff2?h1=a2lkc3BhcnR5Y3JhZnRmb3JsZXNzLmNvbQ&hmac=0edee30cc45956407eae2ed7af0bb9851273eb409e84a39a987cd916218d83ec") format("woff2"),
+       url("https://fonts.shopifycdn.com/poppins/poppins_n9.078941d662fb73e03e458f69933d3c3f76d0907f.woff?h1=a2lkc3BhcnR5Y3JhZnRmb3JsZXNzLmNvbQ&hmac=85a7b008073deb3dbf2930772e5f038194006fccbf82dfa0c20bc782b4c9eed3") format("woff");
+}
+
+@font-face {
+    font-family: Material Icons Outlined;
+    font-weight: 400;
+    font-style: normal;
+    font-display: block;
+    src: url(//cdn.shopify.com/s/files/1/0280/9672/5132/t/108/assets/material-icons-outlined.woff2?v=141032514307594503641677767077) format("woff2");
+}

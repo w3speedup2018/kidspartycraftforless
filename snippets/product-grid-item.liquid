@@ -67,7 +67,7 @@
           {{ 'product-' | append: current | placeholder_svg_tag: 'card-image placeholder-svg' }}
         {%- elsif media != blank -%}
           <div id="ProductImageWrapper-{{ media.id }}" class="product--wrapper card-image grid-product--wrapper media-wrapper" style="padding-top:{{ 1 | divided_by: media.preview_image.aspect_ratio | times: 100 }}%;">
-            <img loading="lazy" class="product--image media lazyload ProductImage-{{ media.id }}"
+            <img loading="lazy" class="product--image media lazyloaded ProductImage-{{ media.id }}"
                 {% render 'lazysizes', img: media.preview_image, img_type: 'responsive' %}
                  alt="{{ media.preview_image.alt }}"
                  data-image>
@@ -75,7 +75,7 @@
 
           {%- if image_hover -%}
             <div class="product--wrapper card-image grid-product--wrapper media-wrapper product-hover-image" style="padding-top:{{ 1 | divided_by: media_hover_image.aspect_ratio | times: 100 }}%;">
-              <img loading="lazy" class="product--image media lazyload"
+              <img loading="lazy" class="product--image media lazyloaded"
                   {% render 'lazysizes', img: media_hover_image, img_type: 'responsive', add_on_crop: settings.dbtfy_product_image_crop %}
                    alt="{{ media_hover_image.alt }}">
             </div>

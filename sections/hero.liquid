@@ -31,8 +31,11 @@
             {{ block.shopify_attributes }}>
 
           {%- if block.settings.image != blank -%}
-            <div class="hero-image hero-image-{{ block.id }} media bgset lazyload"
+            <div class="hero-image hero-image-{{ block.id }} media bgset lazyloaded desktop_view"
                 {%- render 'lazysizes', img: block.settings.image, img_mobile: block.settings.image_mobile, img_type: 'background' -%}>
+            </div>
+            <div class="hero-image hero-image-{{ block.id }} media bgset lazyloaded mobile_view"
+                {%- render 'lazysizes-2', img: block.settings.image, img_mobile: block.settings.image_mobile, img_type: 'background' -%}>
             </div>
           {%- elsif block.settings.video != blank -%}
             {%- assign video_extension = block.settings.video | split: '.' | last -%}

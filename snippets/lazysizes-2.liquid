@@ -55,7 +55,11 @@
     {% comment %}
     data-bgset="{{ bgset }}"
     {% endcomment %}
-    style="background-image:url({{ img | img_url: '1512x' }})"
+    {% if img_mobile != blank %}
+        style="background-image:url({{ img_mobile | img_url: '540x' }})"
+    {% else %}
+        style="background-image:url({{ img | img_url: '540x' }})"
+    {% endif %}
     data-sizes="auto"
     data-parent-fit="cover"
 {%- endif -%}
